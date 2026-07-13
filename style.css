@@ -3,33 +3,43 @@
   padding: 0;
 }
 
+h1 {
+  font-size: 4rem;
+  background-color: rgba(18, 17, 17, 0.912);
+  border-bottom: 0.2rem solid rgb(255, 255, 255);
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+}
+
 body {
   text-align: center;
-  background-color: #be7cff;
+  background-image:
+    linear-gradient(rgba(35, 35, 35, 0.558), rgba(132, 131, 131, 0.875)),
+    url("background.jpg");
 }
 
 .container {
-  height: 65vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .board {
-  height: 60vmin;
+  height: 50vmin;
   width: 60vmin;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1.5vmin;
+  gap: 1vmin;
 }
 .box {
-  width: 18vmin;
-  height: 18vmin;
+  width: 17vmin;
+  height: 17vmin;
   border-radius: 10px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.899);
+  border: 2px solid rgb(255, 255, 255);
   font-size: 8vmin;
 }
 
@@ -42,26 +52,52 @@ body {
 }
 
 #reset-btn {
-  background-color: #462464;
-  color: rgb(255, 255, 255);
-  border: 2px solid rgb(255, 255, 255);
+  background-color: #b8b7b7;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   padding: 1rem;
   font-size: 1.25rem;
   border-radius: 1rem;
+  margin-top: 1.2rem;
+}
+
+#reset-btn:hover,
+#reset-btn.active {
+  color: #a5a5a5;
+  background-color: rgb(0, 0, 0);
+  border: 2px solid #a5a5a5;
+}
+
+button {
+  transition: transform 0.2s ease;
+}
+
+button:active {
+  transform: scale(0.9);
 }
 
 #new-btn {
-  background-color: #0a4532;
-  color: white;
-  border: 2px solid black;
+  color: rgb(255, 249, 178);
+  background-color: rgb(0, 0, 0);
+  border: 2px solid rgb(255, 249, 178);
   padding: 1rem;
   font-size: 1.25rem;
   border-radius: 1rem;
 }
 
+#new-btn:hover,
+#new-btn.active {
+  background-color: rgb(255, 249, 178);
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
+}
+
 #msg {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 5vmin;
+  background-color: aliceblue;
+  border: 2px solid black;
+  padding: 1rem;
 }
 .msg-container {
   height: 100vmin;
@@ -88,12 +124,12 @@ body {
 }
 
 #turn {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.964);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 1rem;
   padding: 0.5rem;
   width: 150px;
-  margin: 1rem auto;
+  font-size: 1.5rem;
 }
 
 .instructions-container {
@@ -103,12 +139,12 @@ body {
   margin: 0 auto 2dvh;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(223, 223, 223, 0.947);
   width: 80%;
   max-width: 400px;
 }
 .instructions {
-  color: rgb(151, 67, 19);
+  color: rgb(0, 0, 0);
   font-size: 2.5vmin;
   font-weight: bold;
 }
